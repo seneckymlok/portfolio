@@ -19,6 +19,7 @@
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.0",
     "sass": "^1.93.3",
+    "terser": "^5.44.0",
     "typescript": "^5.4.2",
     "vite": "^5.3.1"
   }
