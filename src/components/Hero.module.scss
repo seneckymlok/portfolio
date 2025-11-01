@@ -1,0 +1,189 @@
+@import '@/styles/variables';
+@import '@/styles/responsive';
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-white;
+  border-bottom: 1px solid $color-gray-90;
+  padding: $spacing-3xl;
+  position: relative;
+
+  @include mobile {
+    min-height: auto;
+    padding: 100px $spacing-lg 80px;
+  }
+
+  @include tablet {
+    padding: $spacing-3xl $spacing-2xl;
+  }
+
+  @include desktop {
+    padding: $spacing-3xl;
+  }
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: $font-size-6xl;
+  font-weight: $font-weight-bold;
+  line-height: 0.95;
+  letter-spacing: -0.035em;
+  margin: 0 0 $spacing-2xl 0;
+
+  @include mobile {
+    font-size: clamp(32px, 8vw, 64px);
+    margin-bottom: $spacing-xl;
+    line-height: 0.9;
+  }
+
+  @include tablet {
+    font-size: $font-size-5xl;
+    margin-bottom: $spacing-xl;
+  }
+
+  @include desktop {
+    font-size: $font-size-6xl;
+    margin-bottom: $spacing-2xl;
+  }
+}
+
+.description {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-regular;
+  line-height: 1.7;
+  color: $color-gray-30;
+  margin: 0 0 $spacing-lg 0;
+  max-width: 600px;
+
+  @include mobile {
+    font-size: $font-size-sm;
+    line-height: 1.6;
+    margin-bottom: $spacing-md;
+  }
+
+  @include tablet {
+    font-size: $font-size-base;
+    margin-bottom: $spacing-lg;
+  }
+
+  @include desktop {
+    font-size: $font-size-lg;
+    margin-bottom: $spacing-lg;
+  }
+}
+
+.focus {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semibold;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $color-gray-50;
+  margin: 0 0 $spacing-2xl 0;
+
+  @include mobile {
+    font-size: $font-size-xs;
+    letter-spacing: 0.1em;
+    margin-bottom: $spacing-lg;
+  }
+
+  @include tablet {
+    font-size: $font-size-xs;
+    margin-bottom: $spacing-xl;
+  }
+
+  @include desktop {
+    margin-bottom: $spacing-2xl;
+  }
+}
+
+.divider {
+  width: 48px;
+  height: 1.5px;
+  background-color: $color-black;
+  margin: 0 0 $spacing-2xl 0;
+  transform-origin: center;
+
+  @include mobile {
+    width: 40px;
+    margin-bottom: $spacing-lg;
+  }
+
+  @include tablet {
+    margin-bottom: $spacing-xl;
+  }
+
+  @include desktop {
+    margin-bottom: $spacing-2xl;
+  }
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-md;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-semibold;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $color-gray-50;
+
+  @include mobile {
+    flex-wrap: wrap;
+    gap: $spacing-sm;
+    row-gap: $spacing-md;
+    font-size: clamp(10px, 2.5vw, 12px);
+    letter-spacing: 0.1em;
+  }
+
+  @include tablet {
+    font-size: $font-size-xs;
+    gap: $spacing-md;
+  }
+
+  span {
+    display: inline-block;
+  }
+
+  .separator {
+    color: $color-gray-70;
+    margin: 0 2px;
+
+    @include mobile {
+      margin: 0 1px;
+    }
+  }
+}
+
+.scroll {
+  position: absolute;
+  bottom: $spacing-2xl;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: $font-size-xs;
+  font-weight: $font-weight-semibold;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: $color-gray-50;
+
+  @include mobile {
+    bottom: $spacing-lg;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+  }
+
+  @include tablet {
+    bottom: $spacing-xl;
+  }
+}

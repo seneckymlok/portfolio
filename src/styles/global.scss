@@ -1,0 +1,114 @@
+@import './variables';
+@import './animations';
+@import './responsive';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $color-white;
+}
+
+body {
+  font-family: $font-family-main;
+  font-size: $font-size-base;
+  font-weight: $font-weight-regular;
+  line-height: 1.6;
+  color: $color-black;
+  background-color: $color-white;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $font-weight-bold;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: $font-size-6xl;
+
+  @include mobile {
+    font-size: $font-size-4xl;
+  }
+}
+
+h2 {
+  font-size: $font-size-4xl;
+
+  @include mobile {
+    font-size: $font-size-2xl;
+  }
+}
+
+h3 {
+  font-size: $font-size-2xl;
+}
+
+p {
+  line-height: 1.8;
+  margin-bottom: $spacing-lg;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  position: relative;
+}
+
+button {
+  font-family: $font-family-main;
+  font-size: $font-size-base;
+  cursor: pointer;
+  border: 1px solid $color-black;
+  background: $color-white;
+  padding: $spacing-lg $spacing-2xl;
+  transition: all $transition-base;
+
+  &:hover {
+    background-color: $color-black;
+    color: $color-white;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+input, textarea {
+  font-family: $font-family-main;
+  font-size: $font-size-base;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.text-mono {
+  font-family: $font-family-mono;
+  font-size: $font-size-sm;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: $font-weight-semibold;
+}
+
+.text-light {
+  font-weight: $font-weight-light;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

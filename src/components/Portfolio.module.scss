@@ -1,0 +1,214 @@
+@import '@/styles/variables';
+@import '@/styles/responsive';
+
+.portfolio {
+  padding: $spacing-5xl $spacing-3xl;
+  background-color: $color-white;
+  border-bottom: 1px solid $color-gray-90;
+
+  @include mobile {
+    padding: $spacing-3xl $spacing-lg;
+  }
+
+  @include tablet {
+    padding: $spacing-4xl $spacing-2xl;
+  }
+
+  @include desktop {
+    padding: $spacing-5xl $spacing-3xl;
+  }
+}
+
+.container {
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+.heading {
+  font-size: $font-size-4xl;
+  font-weight: $font-weight-bold;
+  margin-bottom: $spacing-4xl;
+  letter-spacing: -0.02em;
+
+  @include mobile {
+    font-size: clamp(24px, 6vw, 48px);
+    margin-bottom: $spacing-3xl;
+  }
+
+  @include tablet {
+    font-size: $font-size-3xl;
+  }
+
+  @include desktop {
+    font-size: $font-size-4xl;
+  }
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-4xl;
+
+  @include mobile {
+    gap: $spacing-2xl;
+  }
+
+  @include tablet {
+    gap: $spacing-3xl;
+  }
+
+  @include desktop {
+    gap: $spacing-4xl;
+  }
+}
+
+.project {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $spacing-3xl;
+  align-items: center;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: $spacing-2xl;
+  }
+
+  @include tablet {
+    gap: $spacing-2xl;
+  }
+
+  @include desktop {
+    gap: $spacing-3xl;
+  }
+
+  &:nth-child(even) {
+    @include tablet {
+      direction: rtl;
+
+      > * {
+        direction: ltr;
+      }
+    }
+  }
+}
+
+.imageWrapper {
+  aspect-ratio: 16 / 12;
+  background-color: $color-gray-95;
+  overflow: hidden;
+  border: 1px solid $color-gray-90;
+  transition: all $transition-slow;
+
+  @include mobile {
+    aspect-ratio: 16 / 10;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform $transition-slow;
+  }
+
+  &:hover {
+    border-color: $color-black;
+
+    img {
+      transform: scale(1.03);
+    }
+  }
+}
+
+.projectContent {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-lg;
+
+  h3 {
+    font-size: $font-size-2xl;
+    font-weight: $font-weight-bold;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+
+    @include mobile {
+      font-size: clamp(18px, 5vw, 32px);
+      line-height: 1.2;
+    }
+
+    @include tablet {
+      font-size: $font-size-xl;
+    }
+
+    @include desktop {
+      font-size: $font-size-2xl;
+    }
+  }
+}
+
+.description {
+  font-size: $font-size-base;
+  line-height: 1.8;
+  color: $color-gray-30;
+  margin: 0;
+  font-weight: $font-weight-regular;
+
+  @include mobile {
+    font-size: $font-size-sm;
+    line-height: 1.6;
+  }
+
+  @include tablet {
+    font-size: $font-size-sm;
+  }
+
+  @include desktop {
+    font-size: $font-size-base;
+  }
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+  padding-top: $spacing-lg;
+  border-top: 1px solid $color-gray-90;
+
+  @include mobile {
+    gap: $spacing-sm;
+    padding-top: $spacing-md;
+  }
+}
+
+.tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-md;
+
+  @include mobile {
+    gap: $spacing-sm;
+  }
+
+  span {
+    font-size: $font-size-xs;
+    color: $color-gray-50;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-weight: $font-weight-semibold;
+
+    @include mobile {
+      font-size: 9px;
+      letter-spacing: 0.1em;
+    }
+  }
+}
+
+.outcome {
+  font-size: $font-size-base;
+  color: $color-black;
+  font-weight: $font-weight-semibold;
+  margin: 0;
+
+  @include mobile {
+    font-size: $font-size-sm;
+  }
+}

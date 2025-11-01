@@ -1,0 +1,157 @@
+@import '@/styles/variables';
+@import '@/styles/responsive';
+
+.about {
+  padding: $spacing-5xl $spacing-3xl;
+  background-color: $color-bg-light;
+  border-bottom: 1px solid $color-gray-90;
+
+  @include mobile {
+    padding: $spacing-3xl $spacing-lg;
+  }
+
+  @include tablet {
+    padding: $spacing-4xl $spacing-2xl;
+  }
+
+  @include desktop {
+    padding: $spacing-5xl $spacing-3xl;
+  }
+}
+
+.container {
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: $spacing-4xl;
+  align-items: flex-start;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: $spacing-2xl;
+  }
+
+  @include tablet {
+    gap: $spacing-3xl;
+  }
+
+  @include desktop {
+    gap: $spacing-4xl;
+  }
+}
+
+.content {
+  h2 {
+    font-size: $font-size-4xl;
+    font-weight: $font-weight-bold;
+    margin-bottom: $spacing-3xl;
+    letter-spacing: -0.02em;
+
+    @include mobile {
+      font-size: clamp(24px, 6vw, 48px);
+      margin-bottom: $spacing-2xl;
+    }
+
+    @include tablet {
+      font-size: $font-size-3xl;
+    }
+
+    @include desktop {
+      font-size: $font-size-4xl;
+    }
+  }
+
+  p {
+    font-size: $font-size-base;
+    line-height: 1.9;
+    color: $color-gray-20;
+    margin-bottom: $spacing-2xl;
+    font-weight: $font-weight-regular;
+
+    @include mobile {
+      font-size: $font-size-sm;
+      line-height: 1.7;
+      margin-bottom: $spacing-lg;
+    }
+
+    @include tablet {
+      font-size: $font-size-base;
+    }
+
+    @include desktop {
+      font-size: $font-size-base;
+    }
+
+    strong {
+      font-weight: $font-weight-semibold;
+      color: $color-black;
+    }
+
+    &:last-of-type {
+      margin-bottom: $spacing-3xl;
+
+      @include mobile {
+        margin-bottom: $spacing-2xl;
+      }
+    }
+  }
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-2xl;
+  border-top: 1px solid $color-gray-90;
+  padding-top: $spacing-3xl;
+
+  @include mobile {
+    gap: $spacing-lg;
+    padding-top: $spacing-2xl;
+  }
+}
+
+.skillGroup {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+
+  span {
+    color: $color-gray-50;
+    font-size: $font-size-xs;
+  }
+
+  p {
+    font-size: $font-size-sm;
+    margin: 0;
+    color: $color-gray-20;
+    line-height: 1.6;
+
+    @include mobile {
+      font-size: $font-size-xs;
+    }
+  }
+}
+
+.visual {
+  @include mobile {
+    display: none;
+  }
+}
+
+.imageBlock {
+  aspect-ratio: 1;
+  background-color: $color-gray-95;
+  border: 1px solid $color-gray-90;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-gray-70;
+  font-size: $font-size-sm;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: $font-weight-regular;
+}

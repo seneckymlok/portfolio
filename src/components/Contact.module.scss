@@ -1,0 +1,236 @@
+@import '@/styles/variables';
+@import '@/styles/responsive';
+
+.contact {
+  padding: $spacing-5xl $spacing-3xl;
+  background-color: $color-white;
+  text-align: center;
+  border-top: 1px solid $color-gray-90;
+
+  @include mobile {
+    padding: $spacing-3xl $spacing-lg;
+  }
+
+  @include tablet {
+    padding: $spacing-4xl $spacing-2xl;
+  }
+
+  @include desktop {
+    padding: $spacing-5xl $spacing-3xl;
+  }
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact h2 {
+  font-size: $font-size-5xl;
+  font-weight: $font-weight-bold;
+  margin-bottom: $spacing-2xl;
+  letter-spacing: -0.02em;
+
+  @include mobile {
+    font-size: clamp(28px, 7vw, 48px);
+    margin-bottom: $spacing-lg;
+  }
+
+  @include tablet {
+    font-size: $font-size-4xl;
+  }
+
+  @include desktop {
+    font-size: $font-size-5xl;
+  }
+}
+
+.subtitle {
+  font-size: $font-size-lg;
+  color: $color-gray-30;
+  margin-bottom: $spacing-3xl;
+  line-height: 1.8;
+  font-weight: $font-weight-regular;
+
+  @include mobile {
+    font-size: $font-size-base;
+    margin-bottom: $spacing-2xl;
+    line-height: 1.7;
+  }
+
+  @include tablet {
+    font-size: $font-size-base;
+  }
+
+  @include desktop {
+    font-size: $font-size-lg;
+  }
+}
+
+.emailLink {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-md;
+  padding: $spacing-2xl $spacing-3xl;
+  border: 1px solid $color-black;
+  background-color: $color-white;
+  cursor: pointer;
+  transition: all $transition-base;
+  margin-bottom: $spacing-4xl;
+  text-decoration: none;
+
+  &:hover {
+    background-color: $color-black;
+    color: $color-white;
+  }
+
+  &:active {
+    transform: scale(0.99);
+  }
+
+  @include mobile {
+    margin-bottom: $spacing-3xl;
+    padding: $spacing-lg $spacing-2xl;
+    gap: $spacing-sm;
+  }
+
+  @include tablet {
+    padding: $spacing-xl $spacing-2xl;
+  }
+
+  @include desktop {
+    padding: $spacing-2xl $spacing-3xl;
+  }
+}
+
+.label {
+  font-size: $font-size-xs;
+  color: $color-gray-50;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: $font-weight-semibold;
+
+  @include mobile {
+    font-size: 9px;
+    letter-spacing: 0.1em;
+  }
+
+  .emailLink:hover & {
+    color: $color-white;
+  }
+}
+
+.email {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  letter-spacing: -0.01em;
+  color: $color-black;
+
+  @include mobile {
+    font-size: $font-size-base;
+  }
+
+  @include tablet {
+    font-size: $font-size-base;
+  }
+
+  @include desktop {
+    font-size: $font-size-lg;
+  }
+
+  .emailLink:hover & {
+    color: $color-white;
+  }
+}
+
+.footer {
+  padding-top: $spacing-3xl;
+  border-top: 1px solid $color-gray-90;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-2xl;
+
+  @include mobile {
+    gap: $spacing-lg;
+    padding-top: $spacing-2xl;
+  }
+
+  @include tablet {
+    gap: $spacing-xl;
+  }
+}
+
+.divider {
+  width: 40px;
+  height: 1px;
+  background-color: $color-black;
+
+  @include mobile {
+    width: 32px;
+  }
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: $spacing-2xl;
+  flex-wrap: wrap;
+
+  @include mobile {
+    gap: $spacing-lg;
+  }
+
+  @include tablet {
+    gap: $spacing-xl;
+  }
+
+  a {
+    font-size: $font-size-base;
+    font-weight: $font-weight-semibold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    position: relative;
+    transition: color $transition-base;
+    color: $color-black;
+
+    @include mobile {
+      font-size: $font-size-sm;
+      letter-spacing: 0.08em;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background-color: $color-black;
+      transition: width $transition-base;
+    }
+
+    &:hover {
+      color: $color-gray-50;
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.copyright {
+  font-size: $font-size-xs;
+  color: $color-gray-70;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 0;
+  font-weight: $font-weight-regular;
+
+  @include mobile {
+    font-size: 9px;
+    letter-spacing: 0.08em;
+  }
+}
